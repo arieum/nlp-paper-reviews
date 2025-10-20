@@ -1,0 +1,150 @@
+name: "Paper Review"
+description: "논문 리뷰용 이슈 템플릿"
+title: "Paper Review: [논문 제목]"
+labels: ["paper-review", "NLP"]
+assignees: []
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "📝 Summary"
+      description: "논문의 핵심 아이디어, 방법론, 주요 결과를 3~5줄 이내로 요약하세요."
+      placeholder: |
+        - 핵심 아이디어:
+        - 방법론:
+        - 주요 결과:
+    validations:
+      required: true
+
+  - type: input
+    id: paper_title
+    attributes:
+      label: "📄 Paper Title"
+      description: "논문 제목을 입력하세요."
+      placeholder: "예: Scaling Laws for Neural Language Models"
+    validations:
+      required: true
+
+  - type: input
+    id: authors
+    attributes:
+      label: "👩‍🔬 Authors"
+      description: "논문 저자 이름을 입력하세요 (쉼표로 구분)."
+      placeholder: "예: Smith J., Lee K., Park S."
+
+  - type: dropdown
+    id: venue
+    attributes:
+      label: "🏛️ Conference / Journal"
+      description: "논문이 발표된 학회나 저널을 선택하세요."
+      options:
+        - ACL
+        - EMNLP
+        - NAACL
+        - EACL
+        - COLING
+        - NeurIPS
+        - ICLR
+        - ICML
+        - AAAI
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: "📅 Year"
+      description: "논문 발표 연도를 입력하세요."
+      placeholder: "예: 2024"
+
+  - type: input
+    id: link
+    attributes:
+      label: "🔗 Paper Link"
+      description: "논문 링크 (arXiv, ACL Anthology 등)를 입력하세요."
+      placeholder: "예: https://arxiv.org/abs/2401.12345"
+
+  - type: textarea
+    id: novelty
+    attributes:
+      label: "1️⃣ What is new in the work?"
+      description: "논문에서 제안하는 새로운 아이디어, 방법론, 실험 설계를 정리하세요."
+      placeholder: |
+        - 주요 novelty:
+          - 
+          - 
+
+  - type: textarea
+    id: importance
+    attributes:
+      label: "2️⃣ Why is the work important?"
+      description: "연구의 학문적/산업적 중요성, 기존 연구 대비 기여점을 작성하세요."
+      placeholder: |
+        - 중요성 요약:
+          - 
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: "3️⃣ What is the literature gap?"
+      description: "기존 문헌의 한계, 해결되지 않은 문제점, 공백(gap)을 기술하세요."
+      placeholder: |
+        - 관련 연구:
+          - 
+        - 한계점:
+          - 
+
+  - type: textarea
+    id: gap_fill
+    attributes:
+      label: "4️⃣ How is the gap filled?"
+      description: "제안된 방법이 기존의 한계를 어떻게 극복하는지 설명하세요."
+      placeholder: |
+        - 해결 방식:
+          - 
+
+  - type: textarea
+    id: achievements
+    attributes:
+      label: "5️⃣ What is achieved with the new method?"
+      description: "제안된 방법으로 얻은 성과(모델 성능, 효율성, 일반화 등)를 구체적으로 작성하세요."
+      placeholder: |
+        - 주요 결과:
+          - 
+        - 성능 비교:
+          - 
+
+  - type: textarea
+    id: data
+    attributes:
+      label: "6️⃣ What data are used?"
+      description: "사용된 데이터셋, 전처리 과정, 도메인 특성을 작성하세요."
+      placeholder: |
+        - Dataset(s):
+          - 
+        - Data characteristics:
+          - 
+
+  - type: textarea
+    id: limitations
+    attributes:
+      label: "7️⃣ What are the limitations?"
+      description: "논문의 한계나 향후 연구 방향을 서술하세요."
+      placeholder: |
+        - 제한점:
+          - 
+        - 향후 개선 방향:
+          - 
+
+  - type: textarea
+    id: reviewer_thoughts
+    attributes:
+      label: "🧠 Reviewer’s Thoughts"
+      description: "리뷰어의 인사이트, follow-up idea, 연구 적용 가능성을 작성하세요."
+      placeholder: |
+        - 요약 코멘트:
+          - 
+        - 아이디어 확장:
+          - 
